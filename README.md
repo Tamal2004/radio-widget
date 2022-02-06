@@ -49,7 +49,9 @@ details themselves since that makes the tests very brittle/fragile to refactors 
 positives/negatives; this leads to a bad developer experience and defeats the purpose of testing the
 codebase in the first place since the time-saving benefits are negated.
 
-This is the trophy of test coverage coined by Kent C. Dodds himself
+This is the trophy of test coverage coined by Kent C. Dodds himself:
+
+![Testing Ratio Trophy](https://res.cloudinary.com/kentcdodds-com/image/upload/f_auto,q_auto,dpr_2.0/v1622744540/kentcdodds.com/blog/the-testing-trophy-and-testing-classifications/trophy_wx9aen.png)
 
 It primarily focuses on integration testing since that is where the bulk of the benefits to testing is.
 In addition, it places great emphasis on static testing which in this case is covered by Typescript.
