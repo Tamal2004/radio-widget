@@ -1,0 +1,30 @@
+@import '../../styles/colors.module';
+
+.button {
+    // Resets
+    border: initial;
+    outline: initial; // iOS reset for focus
+    background: initial;
+
+    // Layout
+    box-sizing: content-box; // So that any custom size changes are direct and don't need to account for padding
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    // Border
+    border-radius: 1rem;
+
+    // Sizing
+    width: 3rem;
+    height: 3rem;
+
+    composes: clickable from '../../styles/utils.module.scss';
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

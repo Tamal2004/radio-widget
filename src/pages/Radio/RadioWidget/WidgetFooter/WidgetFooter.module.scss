@@ -1,0 +1,46 @@
+@import '../../../../styles/colors.module';
+@import '../../../../styles/layout.module';
+
+.footer {
+    // Layout
+    padding: $padding-md;
+
+    // Colors
+    background-color: $background-dark;
+}
+
+.currentlyPlaying {
+    // Layout
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: opacity 300ms;
+}
+
+.playing {
+    composes: caption from '../../../../styles/typography.module.scss';
+    color: $primary;
+}
+
+.station {
+    composes: body from '../../../../styles/typography.module.scss';
+    color: $secondary;
+}
+
+.transitionEnter {
+    opacity: 0;
+}
+
+.transitionEnterActive {
+    opacity: 1;
+}
+
+.transitionExit {
+    opacity: 1;
+}
+
+.transitionExitActive {
+    opacity: 0;
+}

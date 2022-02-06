@@ -1,0 +1,25 @@
+@import '../../../../styles/colors.module';
+@import '../../../../styles/layout.module';
+
+.header {
+    // Layout
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: min-content 1fr min-content;
+    align-items: center;
+    justify-items: center;
+    padding: $padding-sm;
+
+    // Colors
+    background: linear-gradient(
+        to right,
+        darken($primary, 0.1),
+        lighten($primary, 0.1)
+    );
+
+    // Typography
+    composes: h1 from '../../../../styles/typography.module.scss';
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+}

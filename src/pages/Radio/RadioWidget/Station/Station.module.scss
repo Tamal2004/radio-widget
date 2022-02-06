@@ -1,0 +1,48 @@
+@import '../../../../styles/colors.module';
+@import '../../../../styles/layout.module';
+
+.station {
+    // Layout
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    /*
+        Padding is used for the :hover & active background changes
+        Margin top/bottom is used to enforce the spacing between multiple station elements
+        Margin left/right is used to offset the padding used so everything is still centered
+     */
+    padding: $padding-tiny;
+    margin: $padding-tiny #{$padding-tiny * -1};
+    width: 100%;
+    border-radius: 1rem;
+
+    composes: clickable from '../../../../styles/utils.module.scss';
+
+    &:not(:last-child) {
+        &::after {
+            content: '';
+            // Layout
+            display: block;
+            position: absolute;
+            bottom: -$padding-tiny; // To account for the margin-bottom from the parent
+
+            // Width has to be reduced by the margin left + right from the parent
+            width: calc(100% - #{$padding-tiny * 2});
+            height: 1px;
+
+            background-color: $grey-dark;
+        }
+    }
+}
+
+.name {
+    composes: body from '../../../../styles/typography.module.scss';
+    color: $secondary;
+}
+
+.frequency {
+    composes: body from '../../../../styles/typography.module.scss';
+    font-weight: 700;
+    color: $secondary;
+}

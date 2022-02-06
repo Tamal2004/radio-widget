@@ -1,0 +1,13 @@
+@import '../../styles/colors.module';
+
+.layout {
+    // Layout
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Color
+    background-color: $background;
+
+    composes: pageLayout from '../../styles/layout.module.scss';
+}

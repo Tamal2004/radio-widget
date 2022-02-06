@@ -1,0 +1,59 @@
+@import '../../../styles/colors.module';
+@import '../../../styles/layout.module';
+
+.widget {
+    width: 40rem;
+    height: 64rem;
+
+    display: grid;
+    grid-template-rows: 10rem 1fr 10rem;
+
+    overflow: hidden;
+    border-radius: 3rem;
+
+    box-shadow: 0 2rem 2.5rem -0.5rem black;
+}
+
+.stations {
+    // Layout
+    display: flex;
+    flex-direction: column;
+    padding: $padding-sm $padding-lg;
+
+    // Border
+    border: 1px solid $grey-light;
+    border-left: initial;
+    border-right: initial;
+
+    // Colors
+    background-color: $background-light;
+
+    // Interaction
+    overflow-y: scroll;
+
+    // Transitions
+    transition: opacity 300ms;
+
+    // Hide scrollbar
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.transitionEnter {
+    opacity: 0;
+}
+
+.transitionEnterActive {
+    opacity: 1;
+}
+
+.transitionExit {
+    opacity: 1;
+}
+
+.transitionExitActive {
+    opacity: 0;
+}
